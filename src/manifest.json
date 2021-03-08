@@ -1,0 +1,12 @@
+{
+  "name": "I'm still watching",
+  "description": "Please don't ask me again if I'm still watching",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["stillWatching.js"]
+    }
+  ]
+}
