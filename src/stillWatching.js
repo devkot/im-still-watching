@@ -11,10 +11,9 @@ const observer = new MutationObserver((mutationsList, observer) => {
     const stillWatchingButton = document.getElementById("confirm-button");
     if (stillWatchingButton) {
       stillWatchingButton.click();
+      console.log("Yes I'm still watching!");
     }
   });
 });
 
-observer.observe(notificationContainer, { childList: true });
-
-// observer.disconnect();
+observer.observe(notificationContainer, { childList: true, subtree: true });
